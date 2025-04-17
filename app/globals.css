@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 10, 10, 10;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --primary: 267 54% 45%; /* Violet #4635B1 */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 285 65% 67%; /* Violet clair #B771E5 */
+    --secondary-foreground: 240 5.9% 10%;
+
+    --accent: 105 74% 75%; /* Vert #AEEA94 */
+    --accent-foreground: 240 5.9% 10%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 355 100% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 98%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --gradient-start: 267 54% 45%; /* #4635B1 */
+    --gradient-end: 285 65% 67%; /* #B771E5 */
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --primary: 267 54% 45%; /* Violet #4635B1 */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 285 65% 67%; /* Violet clair #B771E5 */
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 105 74% 75%; /* Vert #AEEA94 */
+    --accent-foreground: 240 5.9% 10%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    --gradient-start: 267 54% 45%; /* #4635B1 */
+    --gradient-end: 285 65% 67%; /* #B771E5 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-primary {
+  background: linear-gradient(to bottom right, #4635b1, #b771e5);
+}
+
+.gradient-secondary {
+  background: linear-gradient(to bottom right, #b771e5, #aeea94);
+}
+
+.gradient-accent {
+  background: linear-gradient(to bottom right, #aeea94, #4635b1);
+}
+
+/* Correction pour le texte en dark mode */
+.dark .text-red-500 {
+  color: #f87171 !important;
+}
+
+.dark .bg-red-100 {
+  background-color: rgba(254, 226, 226, 0.1) !important;
+}
+
+.dark .border-red-500 {
+  border-color: #f87171 !important;
+}
