@@ -3,7 +3,6 @@ import { createClientComponentClient } from "@/lib/supabase"
 // Fonction pour vérifier la connexion à Supabase
 export async function checkSupabaseConnection() {
   try {
-    ()
     const { data, error } = await supabase.from("profiles").select("count").limit(1)
 
     if (error) {
