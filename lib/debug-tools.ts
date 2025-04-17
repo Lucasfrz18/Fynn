@@ -30,7 +30,7 @@ export async function checkSupabaseConnection() {
 // Fonction pour vérifier l'état de l'authentification
 export async function checkAuthState() {
   try {
-    ()
+
     const { data, error } = await supabase.auth.getSession()
 
     if (error) {
@@ -58,7 +58,6 @@ export async function checkAuthState() {
 // Fonction pour vérifier les permissions RLS
 export async function checkRLSPermissions(userId: string) {
   try {
-    ()
 
     // Tester l'accès aux profils
     const { data: profileData, error: profileError } = await supabase
